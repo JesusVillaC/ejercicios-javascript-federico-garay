@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio de formularios dinámicos</title>
+        <script src='scripts.js'></script>
+    </head>
+    <body>
+        <h1>Ejercicio de formularios dinámicos</h1>
+        <p>Algo que declarar?</p>
+        <select onchange='validarOption(this.value)'>
+            <option>---</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <div id='idDivDeclaracion' hidden>
+            <p>Declara lo que tengas que declarar</p>
+            <input id='idDeclaracion'>
+        </div>
+
+        <p><br>Pulsa <a href="../../../index.html">aquí</a> para volver al frontpage</p>
+    </body>
+</html>

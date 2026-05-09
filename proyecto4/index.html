@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto 4 del curso de JS</title>
+        <script src='scripts.js'></script>
+    </head>
+
+    <body>
+        <h1>Proyecto 4 del curso de JS y HTML</h1>
+        <p>
+            En esta página aplicaré lo que pide el profesor para el proyecto 4. <br>
+            La idea es que en cada página de proyecto se aprecie el progreso en complejidad <br>
+            de las características aprendidas durante el curso. <br>
+            <br>
+            En este proyecto tan solo se piden estas características:
+        </p>
+        <ul>
+            <li><del>Es una  calculadora</del></li>
+            <li><del>Dos visores superiores para meter los dos números a operar</del></li>
+            <li><del>4 botones para los 4 operadores</del></li>
+            <li><del>4 botones más para potencia, raiz cuadrada, valor absoluto y random con valor mínimo y máximo</del></li>
+            <li><del>Campo de resultado</del></li>
+            <li><del>3 botones más para round, floor y ceil</del></li>
+        </ul>
+
+        <h1>Calculadora para el proyecto 4</h1>
+        <input id='idNum1'>
+        <input id='idNum2'>
+        <br>
+        <button id='idSumar' onclick='sumar()'>'+'</button>
+        <button id='idRestar' onclick='restar()'>'-'</button>
+        <button id='idMltiplicar' onclick='multiplicar()'>'*'</button>
+        <button id='idDividir' onclick='dividir()'>'/'</button>
+        <br>
+        <button id='idPotencia' onclick='hacerPotencia()'>'Potencia'</button>
+        <button id='idRaiz' onclick='hacerRaiz()'>'Raíz cuadrada'</button>
+        <button id='idAbsoluto' onclick='hacerAbsoluto()'>'Valor absoluto'</button>
+        <button id='idAleatorio' onclick='hacerAleatorio()'>'Aleatorio'</button>
+        <br>
+        <input id='idResultado'></input>
+        <br>
+        <button id='idRound' onclick='hacerRound()'>'Round'</button>
+        <button id='idFloor' onclick='hacerFloor()'>'Floor'</button>
+        <button id='idCeil' onclick='hacerCeil()'>'Ceil'</button>
+        <p>
+            Clicando <b><a href='../../../index.html'>aquí</a></b> volvemos a la frontpage.
+        </p>
+    </body>

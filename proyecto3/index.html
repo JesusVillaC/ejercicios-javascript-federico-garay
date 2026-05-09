@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto 3 del curso de JS</title>
+    </head>
+    <body onload='comenzarCuentaRegresiva()'>
+        <audio id='audioAlarma'>
+            <source  src='audios/alarma.mp3' type='audio/mpeg'>
+        </audio>
+        <h1>Proyecto 3 del curso de JS y HTML</h1>
+        <p>
+            En esta página aplicaré lo que pide el profesor para el proyecto 3. <br>
+            La idea es que en cada página de proyecto se aprecie el progreso en complejidad <br>
+            de las características aprendidas durante el curso. <br>
+            <br>
+            En este proyecto tan solo se piden estas características:
+        </p>
+        <ul>
+            <li>Sitio web de una página</li>
+            <li>30 segundos</li>
+            <li>Responder 5 preguntas</li>
+            <li>Si falla: alert('Game Over') + Botón 'Reiniciar'</li>
+            <li>Si lo logra: alert ('fecha y respuestas') + Botón 'Listo'</li>
+        </ul>
+        <p>Elementos indispensables para el ejercicio</p>
+        <ul>
+            <li>Cuenta regresiva de 30 a 0</li>
+            <li>5 preguntas</li>
+            <li>5 inputs</li>
+            <li>Botón 'Listo' o 'Enviar'</li>
+            <li>Botón 'Reiniciar'</li>
+        </ul>
+        <p>Funciones</p>
+        <ul>
+            <li>Mostrar tiempo inicial</li>
+            <li>Actualizar el tiempo en pantalla</li>
+            <li>Avisar cuando acabe el tiempo</li>
+            <li>Mostrar alert con fecha y respuestas</li>
+            <li>Botón que reinicia el sitio</li>
+        </ul>
+        
+        <div class='body'>
+            <h1>Proyecto 3 del curso</h1>
+            <span id='segundero'></span>
+            <p>Pregunta 1: 2+2?</p>
+            <input id='respuesta1'>
+            <p>Pregunta 2: 3+3?</p>
+            <input id='respuesta2'>
+            <p>Pregunta 3: Estrella más lejana conocidoa?</p>
+            <input id='respuesta3'>
+            <p>Pregunta 4: Piélago en aleman?</p>
+            <input id='respuesta4'>
+            <p>Pregunta 5: 4+4?</p>
+            <input id='respuesta5'>
+            <button onclick='enviarRespuesta()'>Enviar respuestas</button>
+            <button onclick='recargarPagina()'>Volver a intentarlo</button>
+        </div>
+        
+        <p id='footer'>
+            Clicando <b><a href='../../index.html'>aquí</a></b> volvemos a la frontpage.
+        </p>
+
+
+        <script>
+        let segundos = 30
+        let elementSegundero = document.getElementById('segundero')
+        let intervaloDeTiempo
+        let cuentaRegresiva
+
+
+
+        function comenzarCuentaRegresiva(){
+            intervaloDeTiempo = setInterval(restarSegundo, 1000)
+            cuentaRegresiva = setTimeout(tiempoAcabado, 1000* 30)
+        }
+
+        function restarSegundo(){
+            elementSegundero.textContent = segundos
+            segundos = segundos - 1
+        }
+
+        function tiempoAcabado(){
+            clearInterval(intervaloDeTiempo)
+            clearTimeout(cuentaRegresiva)
+            alert('Tiempo agotado')
+        }
+
+        function enviarRespuesta(){
+            clearInterval(intervaloDeTiempo)
+            clearTimeout(cuentaRegresiva)
+            
+            let respuesta1 = document.getElementById('respuesta1').value
+            let respuesta2 = document.getElementById('respuesta2').value
+            let respuesta3 = document.getElementById('respuesta3').value
+            let respuesta4 = document.getElementById('respuesta4').value
+            let respuesta5 = document.getElementById('respuesta5').value            
+            let fecha = new Date
+            
+            let mensaje = fecha.toLocaleDateString('es-Es') + '\n' +
+            '1. ' + respuesta1 + '\n' +
+            '2. ' + respuesta2 + '\n' +
+            '3. ' + respuesta3 + '\n' +
+            '4. ' + respuesta4 + '\n' +
+            '5. ' + respuesta5 + '\n'
+            
+            alert (mensaje)
+        }
+
+        function recargarPagina(){
+            location.reload()
+        }
+    </script>
+    </body>
+
+
+</html>

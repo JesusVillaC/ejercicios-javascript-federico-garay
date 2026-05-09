@@ -1,0 +1,41 @@
+/*Clase - texto general*/
+.texto{
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(207, 240, 248);
+}
+
+/*Clase - Texto destacado*/
+.textoDestacado{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(138, 223, 159);
+}
+
+/*Clase - Imágenes*/
+.imagen{
+    float: left;
+    width: 40%;
+    margin: 10px;
+    border: solid 2px black;
+}
+
+/*ID - Para darle estilo solo al footer*/
+#footer{
+    background-color: rgb(146, 156, 129);
+    text-align: center;
+}
+
+/*Combinador y pseudo-elemento. Para poner la inicial de cada párrafo en mayúsculas.*/
+div>p::first-letter{
+    font-size: 2em;
+}
+
+/*Atributo - Para darle estilo a los links*/
+a[href]{
+    color: red;
+}
+
+/*ID y estado - Agrandar el footer en hover*/
+#footer:hover{
+    font-size: 1.1em;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de empleados</title>
+    <script src='scripts.js'></script>
+</head>
+<body>
+    <h1>Instrucciones para el proyecto:</h1>
+    <p>Registro de empleados usando objetos y constructores con estos datos:</p>
+    <ul>
+        <li>Código numérico de empleado</li>
+        <li>Nombre</li>
+        <li>Apellido</li>
+        <li>Año de nacimiento</li>
+        <li>Cargo</li>
+    </ul>
+    <p>Debe tener estos 5 inputs con sus labels.</p>
+    <p>Luego un botón para cargar empleado, y otro para mostrar empleados.</p>
+    <p>Usar constructores para las fichas de empleados.</p>
+    <p>Con el segundo botón, mostrar en un alert a los empleados, con sus propiedades.</p>
+
+    <h1>Registro de empleados</h1>
+    <div id='elementoInputs'>
+        <p>
+            <label for='idIdentificacion'>Número de identificación</label><br>
+            <input type='number' id='idIdentificacion'>
+        </p>
+        <p>
+            <label for='idNombre'>Nombre</label><br>
+            <input id='idNombre'>
+        </p>
+        <p>
+            <label for='idApellido'>Apellido</label><br>
+            <input id='idApellido'>
+        </p>
+        <p>
+            <label for='idAño'>Año de nacimiento</label><br>
+            <input id='idAño'>
+        </p>
+        <p>
+            <label for='idCargo'>Cargo</label><br>
+            <input id='idCargo'>
+        </p>
+    </div>
+
+    <button onclick='cargarEmpleado()'>Cargar empleado</button>
+    <button onclick='mostrarEmpleados()'>Mostrar empleados</button>
+</body>
+</html>
+

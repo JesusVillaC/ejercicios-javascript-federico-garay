@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto 5 del curso de JS</title>
+        <script src='scripts.js'></script>
+    </head>
+
+    <body>
+        <h1 style='background-color: lightblue;'>Proyecto 5 del curso de JS y HTML</h1>
+        <p>
+            En esta página aplicaré lo que pide el profesor para el proyecto 5. <br>
+            La idea es que en cada página de proyecto se aprecie el progreso en complejidad <br>
+            de las características aprendidas durante el curso. <br>
+            <br>
+            En este proyecto tan solo se piden estas características:
+        </p>
+        <p>Es una página de cine donde la web recomiende pelis por edad del usuario y género de peli. y debe tener estas características:</p>
+        <ul>
+            <li>Un input para la edad</li>
+            <li>4 botones para los géneros</li>
+            <li>géneros: comedia, drama, musical, crimen</li>
+            <li>función que use switch e if</li>
+            <li>categorías de edades: menores de 13, menores de 16, mayores de 16</li>
+        </ul>
+        <h1 style='text-align: center;'>Mi web de cine</h1>
+        <p>Di tu edad, genio</p>
+        <input id='idEdadUsuario'>
+        <p>Elige un género:</p>
+        <button id='idGenero1' onclick='seleccionarGenero1()'>Comedia</button>
+        <button id='idGenero2' onclick='seleccionarGenero2()'>Drama</button>
+        <button id='idGenero3' onclick='seleccionarGenero3()'>Musical</button>
+        <button id='idGenero4' onclick='seleccionarGenero4()'>Crimen</button>
+        <button id='idEnviar' onclick='mostrarPeli()'>Enviar</button>
+        <p id='idResultadoPelicula'>---</p>
+
+    </body>

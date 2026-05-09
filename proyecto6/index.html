@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto 6 del curso de JS</title>
+        <script src='scripts.js'></script>
+    </head>
+    <body>
+        <h1>Boletín estudiantil</h1>
+        <p>Requisitos:</p>
+        <ul>
+            <li><del>Un array con 5 calificaciones</del></li>
+            <li>4 botones con:
+                <ul>
+                    <li>lista con notas</li>
+                    <li>calcular promedio</li>
+                    <li>obtener nota más alta</li>
+                    <li>establecer si hubo suspensos (nota menor a 4)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h1>Boletín estudiantil</h1>
+        <br>
+        <h3>José Méndez</h3>
+        <p>Nota del curso: 7</p>
+
+        <h3>Elio García</h3>
+        <p>Nota del curso: 9</p>
+
+        <h3>Elisa Mouriá</h3>
+        <p>Nota del curso: 2</p>
+
+        <h3>Pepito Pález</h3>
+        <p>Nota del curso: 4</p>
+
+        <h3>Misco Jones</h3>
+        <p>Nota del curso: 6</p>
+
+        <button type='button' onclick='mostrarListaNotas()'>Lista con notas</button>
+        <button type='button' onclick='calcularPromedio()'>Calcular promedio</button>
+        <button type='button' onclick='obtenerNotaTop()'>Obtener nota más alta</button>
+        <button type='button' onclick='detectarSuspenso()'>Decir si hubo suspensos</button>
+        <p>Promedio: </p>
+        <input id='idPromedio'>
+        <p>Nota top: </p>
+        <input id='idNotaTop'>
+        <p>Hubo suspenso: </p>
+        <input id='idSuspensoCheck'>
+        <div id='idLista'></div>
+    </body>
