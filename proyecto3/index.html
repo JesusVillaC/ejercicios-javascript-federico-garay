@@ -4,70 +4,79 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Proyecto 3 del curso de JS</title>
+        <link rel="stylesheet" href="estilos/estilo.css">
     </head>
     <body onload='comenzarCuentaRegresiva()'>
         <audio id='audioAlarma'>
             <source  src='audios/alarma.mp3' type='audio/mpeg'>
         </audio>
-        <h1>Proyecto 3 del curso de JS y HTML</h1>
-        <p>
-            En esta página aplicaré lo que pide el profesor para el proyecto 3. <br>
-            La idea es que en cada página de proyecto se aprecie el progreso en complejidad <br>
-            de las características aprendidas durante el curso. <br>
-            <br>
-            En este proyecto tan solo se piden estas características:
-        </p>
-        <ul>
-            <li>Sitio web de una página</li>
-            <li>30 segundos</li>
-            <li>Responder 5 preguntas</li>
-            <li>Si falla: alert('Game Over') + Botón 'Reiniciar'</li>
-            <li>Si lo logra: alert ('fecha y respuestas') + Botón 'Listo'</li>
-        </ul>
-        <p>Elementos indispensables para el ejercicio</p>
-        <ul>
-            <li>Cuenta regresiva de 30 a 0</li>
-            <li>5 preguntas</li>
-            <li>5 inputs</li>
-            <li>Botón 'Listo' o 'Enviar'</li>
-            <li>Botón 'Reiniciar'</li>
-        </ul>
-        <p>Funciones</p>
-        <ul>
-            <li>Mostrar tiempo inicial</li>
-            <li>Actualizar el tiempo en pantalla</li>
-            <li>Avisar cuando acabe el tiempo</li>
-            <li>Mostrar alert con fecha y respuestas</li>
-            <li>Botón que reinicia el sitio</li>
-        </ul>
-        
+        <div class="cabecera">
+            <h1>Proyecto 3 del curso de JS y HTML</h1>
+            <p>
+                En esta página aplicaré lo que pide el profesor para el proyecto 3. <br>
+                La idea es que en cada página de proyecto se aprecie el progreso en complejidad <br>
+                de las características aprendidas durante el curso. <br>
+                <br>
+                En este proyecto tan solo se piden estas características:
+            </p>
+            <ul>
+                <li>Sitio web de una página</li>
+                <li>30 segundos</li>
+                <li>Responder 5 preguntas</li>
+                <li>Si falla: alert('Game Over') + Botón 'Reiniciar'</li>
+                <li>Si lo logra: alert ('fecha y respuestas') + Botón 'Listo'</li>
+            </ul>
+            <p>Elementos indispensables para el ejercicio</p>
+            <ul>
+                <li>Cuenta regresiva de 30 a 0</li>
+                <li>5 preguntas</li>
+                <li>5 inputs</li>
+                <li>Botón 'Listo' o 'Enviar'</li>
+                <li>Botón 'Reiniciar'</li>
+            </ul>
+            <p>Funciones</p>
+            <ul>
+                <li>Mostrar tiempo inicial</li>
+                <li>Actualizar el tiempo en pantalla</li>
+                <li>Avisar cuando acabe el tiempo</li>
+                <li>Mostrar alert con fecha y respuestas</li>
+                <li>Botón que reinicia el sitio</li>
+            </ul>
+            <h2><em>Disclaimer:</em></h2>
+            <p>El sitio es extremadamente básico: no comprueba si las respuestas son correctas. Tan solo es una prueba de
+                las funciones que mencionadas, no pretende ser una página con toda su aparente funcionalidad operativa.
+            </p>
+        </div>
+        <div class="barra"></div>
         <div class='body'>
-            <h1>Proyecto 3 del curso</h1>
-            <span id='segundero'></span>
-            <p>Pregunta 1: 2+2?</p>
-            <input id='respuesta1'>
-            <p>Pregunta 2: 3+3?</p>
-            <input id='respuesta2'>
-            <p>Pregunta 3: Estrella más lejana conocidoa?</p>
-            <input id='respuesta3'>
-            <p>Pregunta 4: Piélago en aleman?</p>
-            <input id='respuesta4'>
-            <p>Pregunta 5: 4+4?</p>
-            <input id='respuesta5'>
-            <button onclick='enviarRespuesta()'>Enviar respuestas</button>
-            <button onclick='recargarPagina()'>Volver a intentarlo</button>
+            <h1>Responde rápido</h1>
+            <p id='segundero' class="segundero"></p> 
+            <p class="pregunta">Pregunta 1: ¿2+2?</p>
+            <input id='respuesta1' class="input"><br>
+            <p class="pregunta">Pregunta 2: ¿Capital de Francia?</p>
+            <input id='respuesta2' class="input"><br>
+            <p class="pregunta">Pregunta 3: ¿Continente al sur de Europa?</p>
+            <input id='respuesta3' class="input"><br>
+            <p class="pregunta">Pregunta 4: ¿Gigas en un Tera?</p>
+            <input id='respuesta4' class="input"><br>
+            <p class="pregunta">Pregunta 5: ¿Número de colores primarios?</p>
+            <input id='respuesta5' class="input"><br>
+            <br>
+            <button onclick='enviarRespuesta()' class="boton">Enviar respuestas</button>
+            <button onclick='recargarPagina()' class="boton">Volver a intentarlo</button>
         </div>
         
-        <p id='footer'>
-            Clicando <b><a href='../../index.html'>aquí</a></b> volvemos a la frontpage.
+        <p id='footer' class="footer">
+            Clica <b><a href='../../index.html'>aquí</a></b> para volver a la frontpage.
         </p>
 
 
         <script>
-        let segundos = 30
+        let segundos = 29
         let elementSegundero = document.getElementById('segundero')
         let intervaloDeTiempo
         let cuentaRegresiva
+        let audio = document.getElementById('audioAlarma')
 
 
 
@@ -84,6 +93,7 @@
         function tiempoAcabado(){
             clearInterval(intervaloDeTiempo)
             clearTimeout(cuentaRegresiva)
+            audio.play()
             alert('Tiempo agotado')
         }
 
